@@ -1,0 +1,11 @@
+Carlos
+- Mokups
+- Iniciar projeto Android Studio
+
+Rosário
+- Dossier
+
+Bruno
+- Diagrama Atividades
+- Diagrama Sequencia
+- Diagrama Estados
