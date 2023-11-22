@@ -1,5 +1,6 @@
 Carlos
 - Mokups
+- Diagrama Gant
 - Iniciar projeto Android Studio
 
 Rosário
