@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/ipca"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Cabeçalho com logotipo e botão de login -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:text="LOGIN"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"/>
+            <!--android:background="@drawable/button_background"  Substitua com seu seletor de background -->
+
+        </LinearLayout>
+
+        <!-- Barra de pesquisa -->
+
+
+        <!-- GridLayout para os itens de imóveis -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoId"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:alignmentMode="alignMargins"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Espaço reservado para cada item do imóvel -->
+            <!-- Você precisará replicar esse layout para cada imóvel na sua lista -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_margin="8dp">
+            <!-- android:background="@drawable/property_item_background">  Substitua com um drawable ou cor de fundo -->
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+            <!-- android:src="@drawable/property_image"/>   Substitua com a imagem da propriedade -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BARCELOS\n120.000 €"
+                    android:padding="4dp"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="T3 • 120m²\nCentro da cidade\nCozinha equipada\nGaragem privativa\nEstilo moderno\nBom estado"
+                    android:padding="4dp"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <!-- Repita os LinearLayouts para cada propriedade que você quiser exibir -->
+        </GridLayout>
+
+        <!-- Rodapé -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOBRE"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
