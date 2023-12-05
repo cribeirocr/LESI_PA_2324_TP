@@ -1,0 +1,682 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>PA Diagrams </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ce6d0816-d546-4848-b271-a194b335f977" class="page sans"><header><h1 class="page-title">PA Diagrams </h1><p class="page-description"></p><table class="properties"><tbody></tbody></table></header><div class="page-body"><h1 id="8aaf681c-4107-4195-aeee-21106869c62c" class="">Diagramas de atividades</h1><h2 id="c8f37a75-db99-456f-a51a-ba60782c00e7" class="">Gerais</h2><h3 id="24fb923c-a3eb-45a6-a3ae-92afb82a814f" class=""><strong><strong>1. Processo de Login e Criação de Conta</strong></strong></h3><p id="6a517ddb-46c0-40f0-ac88-132d69000b2d" class="">
+</p><figure id="a0f35ddf-bfd1-400a-846b-5acfd59ad2af" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled.png"><img style="width:776px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled.png"/></a></figure><h3 id="c927c9f7-d76b-4fa3-881e-17d956fafc80" class=""><strong><strong>2. Centro de Mensagens</strong></strong></h3><figure id="554e26c6-0de6-4133-a67c-edef1a3d0bee" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%201.png"><img style="width:776px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%201.png"/></a></figure><h3 id="9fd72497-9858-4695-84b9-2ef1b51a1f28" class="">3<strong><strong>. Editar Perfil</strong></strong></h3><figure id="c83fe4bb-5be5-4f56-b6b6-12126214261f" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%202.png"><img style="width:775px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%202.png"/></a></figure><h3 id="2f66ca28-c7a3-45c4-92b0-f4a517e4006a" class="">4<strong><strong>. Eliminar Conta</strong></strong></h3><figure id="c7e32432-11f7-4994-9b2f-29d2d8ece08b" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%203.png"><img style="width:774px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%203.png"/></a></figure><h2 id="03997f48-9f58-4d34-b81d-4fc8af262972" class="">Cliente</h2><h3 id="4b2f72f1-93d2-44cc-a8da-0f8f39cee56a" class="">1<strong><strong>. Processo de Pesquisa de Propriedade</strong></strong></h3><p id="e4b93c07-5b18-4ba7-9ada-61b3f9db2234" class="">
+</p><figure id="06f4dfbe-cbae-42d9-a0b3-db348f165031" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%204.png"><img style="width:776px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%204.png"/></a></figure><h3 id="7e09ba72-1688-4a6d-8a44-ea6fa765ee76" class="">2<strong><strong>. Visualizar Detalhes da Propriedade</strong></strong></h3><p id="5af3a626-e0e9-4198-acda-dab979803246" class="">
+</p><figure id="9289d05b-380a-4c55-bda6-ed66971b8359" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%205.png"><img style="width:772px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%205.png"/></a></figure><h3 id="818ad4f0-df81-4c3c-8944-9845afbdaaff" class="">3<strong><strong>. Configurar Alerta de Propriedade</strong></strong></h3><p id="b09d134d-adb7-4cd1-92cd-76106ecce170" class="">
+</p><figure id="5db224ab-23c2-48dd-8214-44e8dba36de9" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%206.png"><img style="width:776px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%206.png"/></a></figure><h3 id="86192c0d-afc2-4b6b-80af-c9d484f619b6" class="">4<strong><strong>. Consultar Alertas</strong></strong></h3><figure id="1598d506-07e2-44fe-a1f7-8c96bc2f8a5b" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%207.png"><img style="width:773px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%207.png"/></a></figure><h3 id="f1ace431-b6df-4644-a501-7415bacd3d6f" class="">5<strong><strong>. Menu Favoritos</strong></strong></h3><figure id="4b38438d-8e8e-47eb-ac8a-b5aa4b64bf91" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%208.png"><img style="width:768px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%208.png"/></a></figure><h2 id="192f67b0-39c8-486a-a2c1-08daae29ca03" class="">Vendedor</h2><h3 id="163f62f5-6f4b-4efc-a1a2-f7e4803cb25d" class=""><strong><strong>1. Gerir Propriedades</strong></strong></h3><figure id="07b6faec-8c8c-40b1-9fa2-6a5108bc9112" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%209.png"><img style="width:1052px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%209.png"/></a></figure><p id="cf256f40-fabd-429d-a7dd-26bd3f34450c" class="">
+</p><h1 id="34d3ecdf-632b-470f-a4c6-6dbc60401b6b" class="">Diagramas de Sequência</h1><h2 id="a65445c3-8a4e-46f6-b5a5-57d90337f28a" class="">Gerais</h2><h3 id="65bc016d-aa2e-493e-88cc-10bdd630d7ad" class="">1. Login</h3><figure id="a8f540b4-9288-4650-aa03-f23deaf41f8b" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2010.png"><img style="width:1307px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2010.png"/></a></figure><h3 id="8a5aa795-677e-4378-a590-eb5c6ec52a84" class="">2. Registo</h3><figure id="1591e963-158e-412e-9eb2-1fd196c72b2f" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2011.png"><img style="width:1287px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2011.png"/></a></figure><h3 id="664d4b3f-7aeb-45b1-9957-3da2c8818379" class="">3. <strong><strong>Centro de Mensagens</strong></strong></h3><figure id="eb8640b1-1264-4693-880b-290eb854e45c" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2012.png"><img style="width:1312px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2012.png"/></a></figure><h3 id="1b0e0cfb-2959-4b58-9f64-8938388b5a6b" class="">4. <strong><strong>Editar Perfil</strong></strong></h3><figure id="712075d4-959f-4a81-828e-16415a9307b9" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2013.png"><img style="width:1305px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2013.png"/></a></figure><h3 id="26ec1627-f0c9-4356-a9e8-7df2aa98e75a" class="">5. Remover Conta</h3><figure id="2effb1ef-56a8-42ba-8450-08ee5acd8f83" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2014.png"><img style="width:1304px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2014.png"/></a></figure><h2 id="8027d0ca-5d0b-4293-8c50-486915c6a1f6" class="">Cliente</h2><h3 id="93cdb19b-7c2a-4326-b6ad-8a8f8c57a381" class="">1. <strong><strong>Processo de Pesquisa de Propriedade</strong></strong></h3><figure id="91c6df95-ea69-4035-8b63-70cba4a3f82d" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2015.png"><img style="width:1293px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2015.png"/></a></figure><h3 id="a3ca0e30-1155-4217-b506-05047e3eb7f7" class="">2. <strong><strong>Visualização de Detalhes de uma Propriedade</strong></strong></h3><figure id="d28f4bfc-fdca-4cb3-852b-539df72c1565" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2016.png"><img style="width:1283px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2016.png"/></a></figure><h3 id="60c8234f-8a64-4ad8-ac5e-8ca86001726e" class="">3. <strong><strong>Configuração de Alerta de Propriedade</strong></strong></h3><figure id="498b3408-5922-478f-af44-62b916681e02" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2017.png"><img style="width:1285px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2017.png"/></a></figure><h3 id="a1d67298-2600-40fd-a8ce-9f19bef7273f" class="">4. Consultar Alertas</h3><figure id="d3a711f6-945c-4dd8-83a8-1147e60692ae" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2018.png"><img style="width:1280px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2018.png"/></a></figure><h3 id="b276479b-c84b-41d0-a434-1c2ec1fd086f" class="">5. <strong><strong>Gerir e Visualizar Favoritos</strong></strong></h3><figure id="a6b0dcd2-b65d-42d0-a9e1-9fb6a57e0202" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2019.png"><img style="width:1287px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2019.png"/></a></figure><h2 id="2bf1fdda-7699-41e0-87b4-58cd7c117494" class="">Vendedor</h2><h3 id="fca0934f-33d6-4011-858e-77e89eebe850" class="">1. <strong><strong>Gestão de Propriedades</strong></strong></h3><figure id="b133451a-381d-4a94-a209-29b147fcb38d" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2020.png"><img style="width:1200px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2020.png"/></a></figure><h1 id="71ab8c2f-5223-41f9-b236-a75d4c930ac5" class="">Diagramas de Estados</h1><h2 id="834e8b8c-f480-4d77-be98-9d53f9d83f56" class="">Gerais</h2><h3 id="11869218-5d46-4f6c-b05b-f60421b65d76" class="">1. <strong><strong>Autenticação do Utilizador</strong></strong></h3><figure id="f40ac0eb-0312-4f00-ab65-f752f86c12f1" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2021.png"><img style="width:1154px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2021.png"/></a></figure><h3 id="6c5b513b-7fd3-4ec8-b18b-6ba1e96900a9" class="">2. Mensagens</h3><figure id="e07585d8-1d9c-4d26-8259-27b71c0e6fe1" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2022.png"><img style="width:1154px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2022.png"/></a></figure><h3 id="5ddb2f73-ddbc-4dee-8a8b-83caaa9a1abc" class="">3. Eliminar Conta</h3><figure id="6c1d9c3e-0bbe-48df-bde4-ba24dc2b124f" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2023.png"><img style="width:1129px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2023.png"/></a></figure><h3 id="88b15b3b-d2a8-4b26-8a0f-eafc09fb8bb3" class="">4. Edição de Perfil</h3><figure id="1441807b-6630-4518-b0ff-29cd28869921" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2024.png"><img style="width:1204px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2024.png"/></a></figure><h2 id="d6bc03c1-1b22-4fde-ba1c-ff7ae540c979" class="">Cliente</h2><h3 id="107ec211-1d71-4cea-964f-d694dc321f40" class="">1. Pesquisa de propriedades</h3><figure id="d0ac8e24-4c38-47f8-88cc-c25dbf007583" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2025.png"><img style="width:1211px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2025.png"/></a></figure><h3 id="14b17726-6c5b-440c-9bea-457c153b531b" class="">2. Gestão de Alertas</h3><figure id="643b208f-62ad-4171-adda-79c6b10d52f2" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2026.png"><img style="width:1214px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2026.png"/></a></figure><h3 id="6658067f-39a5-4c6d-be25-4c8f8b1c7966" class="">3. Consultar Alertas</h3><figure id="bd3756e6-5f85-4e63-ae18-453f4e07a389" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2027.png"><img style="width:1215px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2027.png"/></a></figure><h3 id="0dbc20ff-6fbb-444f-8a5d-402848270dee" class="">4. Visualizar Propriedade</h3><figure id="a2b96420-b6fe-424e-8706-f212a957980c" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2028.png"><img style="width:1201px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2028.png"/></a></figure><h3 id="d0b830e3-2154-4eda-971c-87564fd77b32" class="">5. Gerir e Visualizar Favoritos</h3><figure id="fcb9a28f-faeb-4840-9a1d-b196343c1c6b" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2029.png"><img style="width:1198px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2029.png"/></a></figure><h2 id="0d3974f7-5d08-4cd1-899b-0123abf1df78" class="">Vendedor</h2><h3 id="90eaecad-497d-4b32-b05b-b7c7663e6b39" class="">1. Gestão de propriedades</h3><figure id="f7d8b49b-140e-420c-81ab-c2589eac7593" class="image"><a href="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2030.png"><img style="width:1200px" src="PA%20Diagrams%20ce6d0816d5464848b271a194b335f977/Untitled%2030.png"/></a></figure><p id="7cd88575-772f-441c-bddf-da67d1037a13" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
