@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="TP_PA" company="" webLink="http://" view-date="2023-08-28" view-index="0" gantt-divider-location="232" resource-divider-location="300" version="3.2.3247" locale="pt_PT">
+<?xml version="1.0" encoding="UTF-8"?><project name="TP_PA" company="" webLink="http://" view-date="2023-09-01" view-index="0" gantt-divider-location="352" resource-divider-location="300" version="3.2.3247" locale="pt_PT">
     <description>
         <![CDATA[Trabalho Prático - PA
 
@@ -7,10 +7,10 @@ Carlos Ribeiro – Nº 18596
 Rosário Silva – Nº 21138
 ]]>
     </description>
-    <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="150" order="0"/>
-        <field id="tpd4" name="Data de início" width="53" order="1"/>
-        <field id="tpd5" name="Data de fim" width="29" order="2"/>
+    <view zooming-state="default:9" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="208" order="0"/>
+        <field id="tpd4" name="Data de início" width="100" order="1"/>
+        <field id="tpd5" name="Data de fim" width="43" order="2"/>
         <option id="taskLabelUp" value="name"/>
         <option id="filter.completedTasks" value="false"/>
     </view>
