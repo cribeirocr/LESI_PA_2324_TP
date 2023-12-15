@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity_login">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_login_background"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_logo_habitaflex"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/editTextUser"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:drawableStart="@drawable/ic_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_text"
+            android:padding="10dp"
+            android:hint="Username"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:drawableStart="@drawable/ic_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_text"
+            android:padding="10dp"
+            android:hint="Password"
+            android:drawablePadding="10dp"/>
+
+
+        <TextView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password?"
+            android:padding="10dp"
+            android:layout_gravity="end"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic"/>
+
+
+        <Button
+            android:id="@+id/btn_login2"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_button"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textSize="23dp"/>
+
+        <TextView
+            android:id="@+id/btn_signUp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</RelativeLayout>
