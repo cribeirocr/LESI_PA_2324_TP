@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:alpha="0.8"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_login_background"
+        android:src="@drawable/img_register_background"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -27,10 +27,10 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:id="@+id/loginTextUser"
+            android:id="@+id/addTextUser"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:drawableStart="@drawable/ic_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,10 +40,62 @@
             android:drawablePadding="10dp"/>
 
         <EditText
-            android:id="@+id/loginTextPassword"
+            android:id="@+id/addTextFullName"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_text"
+            android:padding="10dp"
+            android:hint="Full Name"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/addTextEmail"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_text"
+            android:padding="10dp"
+            android:hint="E-Mail"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/addTextPhoneNumber"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_text"
+            android:padding="10dp"
+            android:hint="PhoneNumber"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/addTextPassword"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_login_text"
+            android:padding="10dp"
+            android:hint="Password"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/addTextPassword2"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
             android:drawableStart="@drawable/ic_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,42 +105,19 @@
             android:drawablePadding="10dp"/>
 
 
-        <TextView
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:padding="10dp"
-            android:layout_gravity="end"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="italic"/>
 
 
         <Button
-            android:id="@+id/btn_login2"
+            android:id="@+id/btn_register"
             android:layout_marginStart="100dp"
             android:layout_marginEnd="100dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_login_button"
-            android:text="Sign in"
+            android:text="Register"
             android:textAllCaps="false"
             android:textSize="23dp"/>
 
-        <TextView
-            android:id="@+id/btn_signUp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:padding="10dp"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:textSize="23dp"
-            android:textStyle="bold"/>
     </LinearLayout>
 </RelativeLayout>
