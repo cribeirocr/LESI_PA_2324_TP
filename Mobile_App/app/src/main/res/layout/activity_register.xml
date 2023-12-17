@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_login">
+    tools:context=".RegisterActivity">
 
 
     <ImageView
@@ -23,101 +23,104 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_logo_habitaflex"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/img_logo_habitaflex" />
 
         <EditText
             android:id="@+id/addTextUser"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:drawableStart="@drawable/ic_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="10dp"
             android:hint="Username"
-            android:drawablePadding="10dp"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/addTextFullName"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:drawableStart="@drawable/ic_fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_fullname"
+            android:drawablePadding="10dp"
             android:hint="Full Name"
-            android:drawablePadding="10dp"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/addTextEmail"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:drawableStart="@drawable/ic_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_mail"
+            android:drawablePadding="10dp"
             android:hint="E-Mail"
-            android:drawablePadding="10dp"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/addTextPhoneNumber"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:drawableStart="@drawable/ic_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="10dp"
             android:hint="PhoneNumber"
-            android:drawablePadding="10dp"/>
+            android:inputType="phone"
+            android:maxLength="9"
+            android:padding="10dp" />
+
 
         <EditText
             android:id="@+id/addTextPassword"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:drawableStart="@drawable/ic_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
             android:hint="Password"
-            android:drawablePadding="10dp"/>
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/addTextPassword2"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="10dp"
-            android:drawableStart="@drawable/ic_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
             android:hint="Password"
-            android:drawablePadding="10dp"/>
-
-
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="100dp"
             android:background="@drawable/edit_button"
             android:text="Register"
             android:textAllCaps="false"
-            android:textSize="23dp"/>
+            android:textSize="23dp" />
 
     </LinearLayout>
 </RelativeLayout>

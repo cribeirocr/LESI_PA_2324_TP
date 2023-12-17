@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_perfil_background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-26dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView_User"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/img_user_image"
+            app:civ_border_color="#000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/textView_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_login_text"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="10dp"
+            android:hint="UserName"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_UserName"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+        <EditText
+            android:id="@+id/textView_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_login_text"
+            android:drawableStart="@drawable/ic_fullname"
+            android:drawablePadding="10dp"
+            android:hint="FullName"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_UserName"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <EditText
+            android:id="@+id/textView_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_login_text"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="10dp"
+            android:hint="PhoneNumber"
+            android:inputType="phone"
+            android:maxLength="9"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_fullName"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+        <EditText
+            android:id="@+id/addTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_login_text"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="20dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView_phoneNumber"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <EditText
+            android:id="@+id/addTextPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/edit_login_text"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="20dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/addTextPassword"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="120dp"
+            android:background="@drawable/edit_button"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/addTextPassword2"
+            tools:layout_editor_absoluteX="100dp" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="120dp"
+            android:background="@drawable/edit_button_delete"
+            android:text="DELETE"
+            android:textSize="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save"
+            tools:layout_editor_absoluteX="100dp" />
+    </LinearLayout>
+</RelativeLayout>

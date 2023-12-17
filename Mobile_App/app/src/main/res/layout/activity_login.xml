@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_login">
+    tools:context=".MainActivity">
 
 
     <ImageView
@@ -23,72 +24,86 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/img_logo_habitaflex"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:src="@drawable/img_logo_habitaflex" />
 
         <EditText
             android:id="@+id/loginTextUser"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
-            android:drawableStart="@drawable/ic_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_username"
+            android:drawablePadding="10dp"
             android:hint="Username"
-            android:drawablePadding="10dp"/>
+            android:padding="10dp" />
 
         <EditText
             android:id="@+id/loginTextPassword"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="40dp"
-            android:drawableStart="@drawable/ic_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/edit_login_text"
-            android:padding="10dp"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="10dp"
             android:hint="Password"
-            android:drawablePadding="10dp"/>
-
+            android:inputType="textPassword"
+            android:padding="10dp" />
 
         <TextView
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Forgot Password?"
-            android:padding="10dp"
             android:layout_gravity="end"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:text="Forgot Password?"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
 
 
         <Button
-            android:id="@+id/btn_login2"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginTop="50dp"
+            android:id="@+id/btn_signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="100dp"
             android:background="@drawable/edit_button"
             android:text="Sign in"
             android:textAllCaps="false"
-            android:textSize="23dp"/>
+            android:textSize="23dp" />
 
         <TextView
             android:id="@+id/btn_signUp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:padding="10dp"
             android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            android:text="Sign Up"
             android:textColor="@color/black"
             android:textSize="23dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_button"
+            android:text="About"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </LinearLayout>
 </RelativeLayout>
