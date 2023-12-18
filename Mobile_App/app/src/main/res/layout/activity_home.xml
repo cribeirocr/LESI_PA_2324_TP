@@ -82,7 +82,7 @@
         android:columnOrderPreserved="false">
 
         <include
-            layout="@layout/property_card"
+            layout="@layout/card_home_imovel"
             android:id="@+id/card1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
             app:layout_constraintWidth_percent="0.5" />
 
         <include
-            layout="@layout/property_card"
+            layout="@layout/card_home_imovel"
             android:id="@+id/card2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -108,6 +108,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="MENU"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_perfil"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -117,6 +119,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Perfil"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintStart_toEndOf="@id/btn_menu"
         app:layout_constraintEnd_toStartOf="@id/btn_logOut"
         app:layout_constraintBottom_toBottomOf="parent" />
@@ -126,6 +130,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Log Out"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintStart_toEndOf="@id/btn_perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

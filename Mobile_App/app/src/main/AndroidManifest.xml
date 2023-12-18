@@ -13,6 +13,21 @@
         android:theme="@style/Theme.Mobile_App"
         tools:targetApi="31">
         <activity
+            android:name=".MenuMessagesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuImovelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuHistoricActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuFavoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
             android:name=".PerfilActivity"
             android:exported="false" />
         <activity
